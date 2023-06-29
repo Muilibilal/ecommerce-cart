@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-container container">
+      <section class="nav-left">
+        <img src="images/icon-menu.svg" alt="menu" id="menu" />
+        <img src="images/logo.svg" alt="sneakers logo" id="logo" />
+        <div class="fade"></div>
+        <aside class="nav-items">
+          <img src="images/icon-close.svg" alt="close-btn" id="close-btn" />
+          <p><a href="#">Collections</a></p>
+          <p><a href="#">Men</a></p>
+          <p><a href="#">Women</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Contact</a></p>
+        </aside>
+      </section>
+      <section class="nav-icons">
+        <div class="cart-icon-contents">
+          <img src="images/icon-cart.svg" alt="cart icon" id="cart-icon" />
+          <span class="product-number">0</span>
+          <section class="cart-modal">
+            <h3 class="cart-title">Cart</h3>
+            <div class="cart-content no-product">No product in cart</div>
+            <button class="orange-btn">Checkout</button>
+          </section>
+        </div>
+
+        <img src="images/image-avatar.png" alt="user avatar" id="user-avatar" />
+      </section>
+    </nav>
+    <div class="message">No product added yet</div>
+    <main class="main-section">
+      <section class="left-content">
+        <div class="product-images">
+          <img
+            src="images/image-product-1.jpg"
+            alt="product-image1"
+            class="product-image 1"
+          />
+          <div class="swipers">
+            <img
+              src="images/icon-previous.svg"
+              alt="previous image"
+              id="previous"
+            />
+            <img src="images/icon-next.svg" alt="next image" id="next" />
+          </div>
+        </div>
+        <div class="product-thumbnails">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="product1 thumbnail"
+            class="thumbnail"
+            id="0"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="product2 thumbnail"
+            class="thumbnail"
+            id="1"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="product3 thumbnail"
+            class="thumbnail"
+            id="2"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="product4 thumbnail"
+            class="thumbnail"
+            id="3"
+          />
+        </div>
+      </section>
+      <section class="right-content">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="content-text">
+          These low-profile sneakers are your perfect casual wear
+          companion.Featuring a durable rubber outer sole, they’ll withstand
+          everything the weather can offer.
+        </p>
+        <div class="price">
+          <div class="new-price">
+            $125.00
+            <span id="percent-off">50%</span>
+          </div>
+          <div class="old-price">$250.00</div>
+        </div>
+        <div class="buttons">
+          <div class="quantity-container">
+            <img
+              src="images/icon-minus.svg"
+              alt="reduce quantity"
+              id="reduce-quantity"
+            />
+            <p id="quantity">0</p>
+            <img
+              src="images/icon-plus.svg"
+              alt="increase quantity"
+              id="increase-quantity"
+            />
+          </div>
+          <button class="add-cart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="#69707D"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <p id="add-text">Add to cart</p>
+          </button>
+        </div>
+      </section>
+
+      <div class="fade"></div>
+      <section class="lightbox">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+            fill="#69707D"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <div class="product-images">
+          <img
+            src="images/image-product-1.jpg"
+            alt="product"
+            class="product-image1"
+          />
+          <div class="swipers">
+            <img
+              src="images/icon-previous.svg"
+              alt="previous image"
+              id="previous"
+            />
+            <img src="images/icon-next.svg" alt="next image" id="next" />
+          </div>
+        </div>
+        <div class="product-thumbnails">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="product1 thumbnail"
+            id="thumbnail1"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="product2 thumbnail"
+            id="thumbnail2"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="product3 thumbnail"
+            id="thumbnail3"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="product4 thumbnail"
+            id="thumbnail4"
+          />
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
