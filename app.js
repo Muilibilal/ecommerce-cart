@@ -178,12 +178,15 @@ function deleteProd() {
       cartContent.textContent = "No product in cart";
       cartContent.classList.add("no-product");
       e.currentTarget.classList.remove("active-cart-modal");
-      messageImp(message, "Product removed from cart");
+      if (orangeBtn.classList.contains("delete-product")) {
+        messageImp(message, "Your payment is successful", "#0bb90b");
+        orangeBtn.classList.remove("delete-product");
+      } else {
+        messageImp(message, "Product removed from cart");
+      }
     }
   });
 }
-
-deleteProd();
 
 document.body.addEventListener("click", (e) => console.log(e.target));
 
@@ -193,7 +196,6 @@ orangeBtn.addEventListener("click", (e) => {
     cartModal.classList.remove("active-cart-modal");
   } else {
     orangeBtn.classList.add("delete-product");
-    messageImp(message, "Your payment is successful", "#0bb90b");
     deleteProd();
   }
 });
@@ -204,5 +206,5 @@ function messageImp(msg, data, color = "hsl(26, 100%, 55%)") {
   msg.innerHTML = data;
   setTimeout(() => {
     msg.classList.remove("show");
-  }, 1500);
+  }, 2000);
 }

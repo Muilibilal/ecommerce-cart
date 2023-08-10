@@ -183,6 +183,7 @@ a {
 
 .cart-content #delete-product {
   width: 15px;
+  cursor: pointer;
 }
 
 button.orange-btn {
@@ -196,6 +197,7 @@ button.orange-btn {
   outline: none;
   border: none;
   margin: 15px auto;
+  cursor: pointer;
 }
 
 /*
@@ -421,13 +423,12 @@ h1 {
 }
 
 .lightbox .swipers {
-  display: block;
   position: absolute;
-  top: 45%;
-  left: 0;
-  transform: translate(0, -45%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   display: flex;
-  width: 100%;
   justify-content: space-between;
 }
 
@@ -493,6 +494,10 @@ End of desktop view
     width: 100vw;
     max-width: 100%;
     padding: 0px;
+  }
+
+  .lightbox.show {
+    display: none;
   }
 
   aside.nav-items {
