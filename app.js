@@ -24,7 +24,7 @@ const cartIcon = document.querySelector("#cart-icon");
 const cartModal = document.querySelector(".cart-modal");
 const productImages = document.querySelectorAll(".images");
 const singleProductImage = document.querySelector(".product-images img");
-console.log(productImages);
+// console.log(productImages);
 const indImg = document.querySelectorAll(".images img");
 const previousImage = document.querySelectorAll("#previous");
 const nextImage = document.querySelectorAll("#next");
@@ -86,7 +86,7 @@ function next() {
     currentImg = 0;
   }
 
-  console.log(currentImg);
+  // console.log(currentImg);
 
   // console.log(imageIndex);
   // console.log(productImages[0]);
@@ -188,7 +188,7 @@ function deleteProd() {
   });
 }
 
-document.body.addEventListener("click", (e) => console.log(e.target));
+// document.body.addEventListener("click", (e) => console.log(e.target));
 
 orangeBtn.addEventListener("click", (e) => {
   if (cartContent.classList.contains("no-product")) {
